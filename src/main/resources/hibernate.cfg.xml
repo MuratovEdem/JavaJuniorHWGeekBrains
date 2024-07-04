@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">pass</property>
+        <property name="show_sql">true</property>
+
+        <!-- none, create, create-drop, update, validate-->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <mapping class="org.example.seminar4.Post"/>
+        <mapping class="org.example.seminar4.PostComment"/>
+    </session-factory>
+</hibernate-configuration>
